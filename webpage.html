@@ -1,0 +1,306 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #EBFADC;
+            color: #222;
+        }
+
+        .school-header {
+            background-color: #c9230c;
+            color: white;
+            padding: 18px 5%;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-bottom: 7px solid #063c2d;
+        }
+
+     
+
+        .school-name {
+            font-size: 19px;
+            font-weight: bold;
+        }
+
+        .school-subtitle {
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        .hero {
+            background-color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .hero h1 {
+            color: #063c2d;
+            margin: 0 0 10px;
+        }
+
+        nav {
+            background-color: #303030;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 16px 20px;
+        }
+
+        nav a:hover {
+            background-color: #07523d;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 28px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background-color: white;
+            padding: 28px;
+            margin-bottom: 22px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px #dddddd;
+        }
+
+        h2 {
+            color: #07523d;
+            margin-top: 0;
+        }
+
+        .about-layout {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .profile-picture {
+            width: 220px;
+            height: 220px;
+            flex-shrink: 0;
+            border-radius: 12px;
+            background-color: #e5eee8;
+            border: 3px solid #07523d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #07523d;
+            padding: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 11px 18px;
+            background-color: #07523d;
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .project-card {
+            background-color: #f4f6f4;
+            border-left: 5px solid #c9230c;
+            padding: 18px;
+            border-radius: 5px;
+        }
+
+        .project-card h3 {
+            color: #07523d;
+            margin-top: 0;
+        }
+
+        footer {
+            background-color: #063c2d;
+            color: white;
+            padding: 22px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            font-size: 13px;
+        }
+
+        .motto {
+            text-align: right;
+            letter-spacing: 3px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 650px) {
+            .school-name {
+                font-size: 14px;
+            }
+
+            .school-subtitle {
+                font-size: 10px;
+            }
+
+            .about-layout {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .profile-picture {
+                width: 100%;
+                max-width: 260px;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            .motto {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+   
+    <!-- Website Header -->
+    <div class="hero" id="home">
+        <h1>My Portfolio</h1>
+        
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="about-layout">
+
+                <div>
+                    <img src="Profilepic.jpeg" alt="here this the pic"
+                    Your Picture<br>
+                    Replace this box with your photo
+                </div>
+
+                <div>
+                    <h2>About Me</h2>
+
+                    <p>
+                        Hello! My name is <strong> Kyle Andrei S. Alejo</strong>.
+                        I am an IT student learning
+                        about computers, programming, and web development.
+                    </p>
+                    <p>I'm also a player of OLSCHO men's Volleyball team.</p>
+                    <p>
+                        I created this website to introduce myself,
+                        share my interests, and show some of the projects
+                        I have worked on. My goal is to improve my skills
+                        and become a better IT student.
+                    </p>
+
+                    <a class="button" href="#projects">
+                        View My Projects
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>My Projects</h2>
+
+            <div class="projects">
+
+                <article class="project-card">
+                   
+                    <p>
+                      <h3>My Profile Website</h3>
+    <p>A personal webpage created using HTML and CSS.</p>
+
+    <a href="http://localhost:8080/prof.html" target="_blank">
+        Visit My Profile Website
+    </a>
+                    </p>
+                </article>
+
+                <article class="project-card">
+                    <h3>Java Program</h3>
+                    <p>
+                        A beginner Java program that uses variables,
+                        conditions, and loops.
+                    </p>
+                </article>
+
+                <article class="project-card">
+                 
+                       <h2>My Projects</h2>
+
+    
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+
+            <p>
+                Email:
+                <a href="mailto:yourname@example.com">
+                    yourname@example.com
+                </a>
+            </p>
+
+            <p>
+                Facebook:
+                <a href="https://www.facebook.com/" target="_blank">
+                    Visit my Facebook
+                </a>
+            </p>
+
+            <p>Thank you for visiting my personal portfolio!</p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div>CC101 - INTRODUCTION TO COMPUTING</div>
+
+        
+    </footer>
+
+</body>
+</html>

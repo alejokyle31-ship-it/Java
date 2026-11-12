@@ -1,0 +1,343 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 85px;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #EBFADC;
+            color: #222;
+        }
+
+        .hero {
+            background-color: #eeffee;
+            text-align: center;
+            padding: 40px 25px;
+        }
+
+        h1, h2, h3 {
+            color: #07523d;
+        }
+
+        /* Navigation panel */
+        nav {
+            background-color: #063c2d;
+            padding: 12px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 10px #0002;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 22px;
+            display: inline-block;
+            border: 2px solid transparent;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        /* Hover effect */
+        nav a:hover {
+            background-color: #287a50;
+            border-color: #a5e6b8;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px #0003;
+        }
+
+        /* Selected navigation box */
+        nav a.active {
+            background-color: #a5e6b8;
+            color: #063c2d;
+            border-color: white;
+            box-shadow: 0 0 12px #a5e6b8;
+            font-weight: bold;
+        }
+
+        nav a:active {
+            transform: scale(0.95);
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 25px auto;
+            padding: 15px;
+        }
+
+        section {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px #07523d18;
+            border: 1px solid #d6ead3;
+            scroll-margin-top: 85px;
+        }
+
+        /* Highlight the section you visit */
+        section:target {
+            border: 2px solid #07523d;
+            box-shadow: 0 0 15px #07523d35;
+        }
+
+        .about {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .profile-picture {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border: 3px solid #07523d;
+            border-radius: 10px;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .project-card {
+            background-color: #f1f7ed;
+            padding: 18px;
+            border-left: 5px solid #07523d;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 14px #07523d25;
+        }
+
+        .project-card a {
+            color: #07523d;
+            font-weight: bold;
+        }
+
+        .note {
+            background-color: #e2f5df;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 5px solid #07523d;
+            grid-column: 1 / -1;
+        }
+
+        footer {
+            background-color: #063c2d;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                gap: 5px;
+                padding: 10px 5px;
+            }
+
+            nav a {
+                padding: 10px 12px;
+                font-size: 14px;
+            }
+
+            .about {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-picture {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="hero" id="home">
+        <h1>My Personal Portfolio</h1>
+        <p>Welcome to my website!</p>
+    </div>
+
+    <nav>
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+
+        <section id="about">
+            <div class="about">
+
+                <img class="profile-picture"
+                     src="Profilepic.jpeg"
+                     alt="My Profile Picture">
+
+                <div>
+                    <h2>About Me</h2>
+
+                    <p>
+                        Hello! My name is
+                        <strong>Kyle Andrei S. Alejo</strong>.
+                    </p>
+
+                    <p>
+                        I am an IT student learning about computers,
+                        programming, and web development.
+                    </p>
+
+                    <p>
+                        I am also a player of the OLSCHO men's
+                        volleyball team.
+                    </p>
+
+                    <p>
+                        My goal is to improve my programming skills
+                        and become a better IT student.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>My Projects</h2>
+
+            <div class="projects">
+
+                <div class="project-card">
+                    <h3>My Profile Web HTML</h3>
+                    <p>A personal website created using HTML and CSS.</p>
+                    <a href="prof.html">Visit Profile Website</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Java Smart Student Helper</h3>
+                    <p>
+                        A Java program with a multiplication table,
+                        palindrome checker, age calculator,
+                        diamond pattern, and SDG messages.
+                    </p>
+                    <a href="SmartStudentHelper.java" download>
+                        Download Java Code
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Java Zodiac Sign Checker</h3>
+                    <p>
+                        Checks a person's zodiac sign using
+                        their birth month and date.
+                    </p>
+                    <a href="zodiac.java" download>
+                        Download Java Code
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Java Grade Checker</h3>
+                    <p>
+                        Displays a message based on the
+                        letter grade entered by the user.
+                    </p>
+                    <a href="GRADING.java" download>
+                        Download Java Code
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Java Food Menu Calculator</h3>
+                    <p>
+                        Displays a food menu and calculates
+                        the price based on the selected food
+                        and quantity.
+                    </p>
+                    <a href="food.java" download>
+                        Download Java Code
+                    </a>
+                </div>
+
+                <div class="note">
+                    <b>NOTE:</b>
+                    Some of my projects were written in Java
+                    and submitted for CC102 for educational purposes.
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contacts</h2>
+
+            <p>
+                Email:
+                <a href="mailto:alejokyle31@gmail.com">
+                    alejokyle31@gmail.com
+                </a>
+            </p>
+
+            <p>
+                Facebook:
+                <a href="https://www.facebook.com/profile.php?id=61583811548140"
+                   target="_blank" rel="noopener noreferrer">
+                    Visit My Facebook
+                </a>
+            </p>
+
+            <p>Thank you for visiting my portfolio!</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>CC101 - INTRODUCTION TO COMPUTING</p>
+        <p>My Personal Portfolio</p>
+    </footer>
+
+    <script>
+        const links = document.querySelectorAll("nav a");
+
+        links.forEach(function(link) {
+            link.addEventListener("click", function() {
+                links.forEach(function(item) {
+                    item.classList.remove("active");
+                });
+
+                link.classList.add("active");
+            });
+        });
+    </script>
+
+</body>
+</html>
